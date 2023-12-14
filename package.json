@@ -1,0 +1,25 @@
+{
+  "name": "fbvj",
+  "version": "1.0.0",
+  "author": "voljet",
+  "license": "MIT",
+  "scripts": {
+    "install": "npm install --global yarn",
+    "start": "docker run -it -p <port>:8000 mattermost/focalboard",
+    "build": "yarn dcd build --no-cache",
+    "up": "yarn dcd up -d --build",
+    "restart": "yarn dcd restart",
+    "down": "yarn dcd down",
+    "logs": "yarn dcd logs -f",
+    "patch": "yarn version --patch",
+    "rm": "docker volume prune",
+    "rms": "docker system prune -a --volumes",
+    "dcd": "docker compose --profile dev",
+    "upg": "yarn upgrade-interactive --latest"
+  },
+  "engines": {
+    "npm": ">=8.5.5 <10.0.0",
+    "node": ">=16.15.0 <22.0.0",
+    "yarn": ">=1.22.15 <2.0.0"
+  }
+}

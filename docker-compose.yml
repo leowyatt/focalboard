@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  fbvj:
+    profiles: ["dev"]
+    image: mattermost/focalboard
+    restart: always
+    ports:
+      - 80:8000
